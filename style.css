@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 /* ナビ部分　*/
 nav ul {
     display: flex;
@@ -30,5 +34,38 @@ nav li:hover {
 
 img  {
     width: 100%;
-    height: 25%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* main */
+h2 {
+    text-align: center;
+}
+
+.trim-image-to-circle {
+    background-image: url("img/自分の画像.jpg"); /*表示する画像*/
+    width: 230px;
+    height: 230px;
+    border-radius: 50%; /* 角丸半径を50%にする(=円形にする)*/
+    background-position: center center; /*横長画像の左上を基準に表示　*/
+}
+
+p {
+    text-align: center;
+}
+
+.box {
+    background: #c4d9ff; /*背景色の指定 */
+    border-left: #4e7bcc 5px solid;
+    padding: 0%;
+}
+
+.box h2 {
+    margin: 10px;
+    padding: 0px;
+}
+
+div .trim-image-to-circle {
+    margin: 0 auto;
 }
