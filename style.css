@@ -1,5 +1,6 @@
 h1 {
     text-align: center;
+    color: #3f575b;;
 }
 
 h2 {
@@ -7,6 +8,20 @@ h2 {
 }
 
 p {
+    text-align: center;
+}
+
+li {
+    text-align: center;
+}
+
+.iframe {
+    width: 120px;
+    height: 240px;
+    marginwidth: .0;
+    marginheight="0"
+    scrolling="no"
+    frameborder="0"
     text-align: center;
 }
 
