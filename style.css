@@ -89,3 +89,171 @@ nav li:hover {
     margin: 5px;
     background-color: aqua;
 }
+
+form {
+    background-color: #f2f2f2;
+    padding: 20px; 
+    /*一応忘れそうなので書いておく、paddingは横の長さ、heightは縦 */
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+     /*font-weight:bold; でテキストを太字にする */
+}
+
+input textarea {
+    text-align: center;
+    padding: 10px;
+    border: none; 
+    border-radius: 5px;
+    /*border-radiusとは要素の核を丸くすることができる*/
+    width: 100%;
+    margin-bottom: 20px;
+    /*margin-bottomとは要素の下の余白を指定する物
+    つまり要素の株に設定されたマージンの大きさを調整することができるもの*/
+}
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: wihte;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 1rem; /* remとは*/
+    border: 1px solid #ccc; /*solidとは要素の境界線を指す*/
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 3px;
+}
+
+/*検索結果表示部分*/
+
+.search-results {
+    display: none;
+}
+
+.search-results h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-results li {
+    margin-bottom: 5px;
+}
+
+.search-results a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.News {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+
+.News .item a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 20px;
+}
+
+.News .item:first-child a {
+    border-top: 1px solid #ccc;
+}
+
+.News .item .data {
+    margin: 0;
+    min-width: 140px;
+    font-size: 16px;
+    color: #999;
+    padding: 0 20px 0 0;
+}
+.News .item .category {
+    margin: 0;
+    min-width: 140px;
+    padding: 0 20px 0 0;
+}
+
+.News .item .category span {
+    background: #999;
+    color: #fff;
+    text-align: center;
+    display: inline-block; 
+    /*inline-blockとは水平に並べる時にいい*/
+    padding: 5px 20px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.News .item .title {
+    margin: 0;
+    width: 100%;
+}
+
+.News .item a:hover .title{
+    color: #00f;
+}
+
+@media screen and (max-width: 767px) {
+    .News .item a{
+        flex-wrap: wrap;
+    }
+    .News .item .data {
+        min-width: 100px;
+    }
+    .News .item .title {
+        margin-top: 10px;
+    }
+}
+
+/*装飾*/
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+body {
+    margin: 20px;
+}

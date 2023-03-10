@@ -27,14 +27,24 @@
     </nav>
     <main>
         <div class="content">
-            <form method=”get” action=http://www.google.co.jp/search target=”_blank”>
-                <input type=”text” name="query" size="30" maxlength="255" value="">
-                <input type=”submit” name="btn" value="検索">
-                <input type="hidden" name="hl" value="ja">
-                <input type="hidden" name="sitesearch" value="www.google.co.jp">
-                </form>
-                
-                
+            <!--検索フォーム部分-->
+            <form action="#" method="get">
+                <label for="search">サイト内検索はこちら</label>
+                <input type="text" id="search" name="search" placeholder="検索キーワードを入力">
+                <button type="submit">検索</button>
+            </form>
+
+            <!--検索結果表示部分-->
+            <div class="search-radius">
+                <h2>検索結果</h2>
+                <ul>
+                    <li><a href="#">検索結果１</a></li>
+
+                    <li><a href="#">検索結果２</a></li>
+
+                    <li><a href="#">検索結果３</a></li>
+                </ul>
+            </div>
             <img src="IMg/IMG_3743.jpg" alt="部屋の机回り">
         </div>
         <section>
@@ -53,14 +63,20 @@
                 <li>jQuery:△</li>
                 <li><a href="https://github.com/kokotyan">Github:○<a></li>
                 <li>windows:○</li>
-                <li>自作PC組み立て</li>
+                <li>自作PC組み立て:○</li>
                 <br>
                 <p>勉強に使用した資料や教材</p>
                 <li>progate</li>
                 <li>Manaさん著作の1冊で全て身につくシリーズ</li>
-                <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4797398892&linkId=683f15deeeb952051ccdc54a969fe9e0"></iframe>
-                <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4815609403&linkId=10de7c7d17f7b00de663b5fedb19a971"></iframe>
-                <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4815615756&linkId=73a8d4139982641c3a155cf7263590f3"></iframe>
+                <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
+                    style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
+                    src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4797398892&linkId=683f15deeeb952051ccdc54a969fe9e0"></iframe>
+                <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
+                    style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
+                    src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4815609403&linkId=10de7c7d17f7b00de663b5fedb19a971"></iframe>
+                <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
+                    style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
+                    src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4815615756&linkId=73a8d4139982641c3a155cf7263590f3"></iframe>
             </div>
         </section>
         <br>
@@ -81,7 +97,49 @@
                 </div>
             </div>
         </section>
+        <br>
+        <br>
+        <ul class="News">
+            <h2>News!!</h2>
+            <li class="item">
+                <a href="#">
+                    <p class="data">2023/3/10</p>
+                    <p class="category"><span>お知らせ</span></p>
+                    <p class="title">このサイトを立ち上げました！</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <p class="data">2023/3/10</p>
+                    <p class="category"><span>今日の一言</span></p>
+                    <p class="title">内容はこちらから</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <p class="data">2023/3/10</p>
+                    <p class="category"><span>アップデートのお知らせ</span></p>
+                    <p class="title">重大な不具合を修正しました</p>
+                </a>
+            </li>
+        </ul>
     </main>
+    <footer>
+        <p>質問はこちらより</p>
+        <form action="/path/to/server" method="post">
+            <label for="name">お名前</label>
+            <!--labelはHTMLフォームの要素と関連づけられたテキストを定義する為の要素、フォーム要素に対応する説明文を提供し、ユーザーがどのフィールドに入力する必要があるかを明確に示す。ちなみにfor要素がある。ユーザーがラベルをクリックすると対応するフォーム要素がアクティブになる-->
+            <input type="text" id="name" name="name" required>
+            <!--requiredはユーザが何も入力せずに送信するのを防ぐもの"-->
+            <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">メッセージ</label>
+                <textarea id="message" name="message" required></textarea>
+                <!--textareaはフォームで複数行のテキスト入力を受けつける為に使用される要素-->
+                <button type="submit">送信します</button>
+        </form>
+    </footer>
 </body>
 
 </html>
