@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
+<head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#">
 
-<head>
-    <meta charset="UTF-8">
+    <meta https-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ここちゃんのポートフォリオ</title>
+
+    <link rel="alternate" href="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Capriola">
+    <link rel="stylesheet" href="style.css"> 
     <link rel="shortcut icon" href="img/IMG_3878.jpg">
-    <title>自己紹介サイト</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="訓練生エンジニアここちゃんのポートフォリオサイト。 僕がこれまで作った物や、身につけた技術をぎゅっと詰め込んでいます！！">
+    <meta name="keywords" content="ここちゃんの,訓練生,フロントエンドエンジニア,ポートフォリオ">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ここちゃんのポートフォリオ">
+    <meta property="og:url" content="https://onecoms.org">
+    <meta property="og:description" content="訓練生エンジニアここちゃんのポートフォリオサイト。僕がこれまで作った物や、身につけた技術をぎゅっと詰め込んでいます！！">
+    <meta property="">
+    <meta property="og:site_name" content="ここちゃんのポートフォリオ">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:site" content="@murakumo_yu">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
@@ -27,24 +44,6 @@
     </nav>
     <main>
         <div class="content">
-            <!--検索フォーム部分-->
-            <form action="#" method="get">
-                <label for="search">サイト内検索はこちら</label>
-                <input type="text" id="search" name="search" placeholder="検索キーワードを入力">
-                <button type="submit">検索</button>
-            </form>
-
-            <!--検索結果表示部分-->
-            <div class="search-radius">
-                <h2>検索結果</h2>
-                <ul>
-                    <li><a href="#">検索結果１</a></li>
-
-                    <li><a href="#">検索結果２</a></li>
-
-                    <li><a href="#">検索結果３</a></li>
-                </ul>
-            </div>
             <img src="IMg/IMG_3743.jpg" alt="部屋の机回り">
         </div>
         <section>
@@ -69,13 +68,10 @@
                 <li>progate</li>
                 <li>Manaさん著作の1冊で全て身につくシリーズ</li>
                 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
-                    style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
                     src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4797398892&linkId=683f15deeeb952051ccdc54a969fe9e0"></iframe>
                 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
-                    style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
                     src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4815609403&linkId=10de7c7d17f7b00de663b5fedb19a971"></iframe>
                 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
-                    style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
                     src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=kokos1327-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=4815615756&linkId=73a8d4139982641c3a155cf7263590f3"></iframe>
             </div>
         </section>
@@ -132,12 +128,12 @@
             <input type="text" id="name" name="name" required>
             <!--requiredはユーザが何も入力せずに送信するのを防ぐもの"-->
             <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required>
 
-                <label for="message">メッセージ</label>
-                <textarea id="message" name="message" required></textarea>
-                <!--textareaはフォームで複数行のテキスト入力を受けつける為に使用される要素-->
-                <button type="submit">送信します</button>
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" required></textarea>
+            <!--textareaはフォームで複数行のテキスト入力を受けつける為に使用される要素-->
+            <button type="submit">送信します</button>
         </form>
     </footer>
 </body>
