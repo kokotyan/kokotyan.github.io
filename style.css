@@ -8,7 +8,8 @@ body {
 
 h1 {
     text-align: center;
-    color: #3f575b;;
+    color: #3f575b;
+    ;
 }
 
 h2 {
@@ -85,7 +86,8 @@ nav li:hover {
     height: 100px;
     text-align: center;
     display: inline-block;
-    border-radius: 50%; /* 角丸半径を50%にする(=円形にする)*/
+    border-radius: 50%;
+    /* 角丸半径を50%にする(=円形にする)*/
 }
 
 /* main */
@@ -111,7 +113,7 @@ nav li:hover {
 
 form {
     background-color: #f2f2f2;
-    padding: 20px; 
+    padding: 20px;
     /*一応忘れそうなので書いておく、paddingは横の長さ、heightは縦 */
     border-radius: 5px;
     max-width: 600px;
@@ -122,13 +124,13 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-     /*font-weight:bold; でテキストを太字にする */
+    /*font-weight:bold; でテキストを太字にする */
 }
 
 input textarea {
     text-align: center;
     padding: 10px;
-    border: none; 
+    border: none;
     border-radius: 5px;
     /*border-radiusとは要素の核を丸くすることができる*/
     width: 100%;
@@ -139,7 +141,7 @@ input textarea {
 
 button[type="submit"] {
     background-color: #4caf50;
-    color: wihte;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -159,8 +161,10 @@ label {
 
 input[type="text"] {
     padding: 5px;
-    font-size: 1rem; /* remとは*/
-    border: 1px solid #ccc; /*solidとは要素の境界線を指す*/
+    font-size: 1rem;
+    /* remとは*/
+    border: 1px solid #ccc;
+    /*solidとは要素の境界線を指す*/
     border-radius: 3px;
 }
 
@@ -205,7 +209,7 @@ button[type="submit"] {
     padding: 0;
 }
 
-.News .item a{
+.News .item a {
     display: flex;
     flex-wrap: wrap;
     flex-wrap: nowrap;
@@ -226,6 +230,7 @@ button[type="submit"] {
     color: #999;
     padding: 0 20px 0 0;
 }
+
 .News .item .category {
     margin: 0;
     min-width: 140px;
@@ -236,7 +241,7 @@ button[type="submit"] {
     background: #999;
     color: #fff;
     text-align: center;
-    display: inline-block; 
+    display: inline-block;
     /*inline-blockとは水平に並べる時にいい*/
     padding: 5px 20px;
     font-size: 12px;
@@ -248,17 +253,19 @@ button[type="submit"] {
     width: 100%;
 }
 
-.News .item a:hover .title{
+.News .item a:hover .title {
     color: #00f;
 }
 
 @media screen and (max-width: 767px) {
-    .News .item a{
+    .News .item a {
         flex-wrap: wrap;
     }
+
     .News .item .data {
         min-width: 100px;
     }
+
     .News .item .title {
         margin-top: 10px;
     }
@@ -266,6 +273,43 @@ button[type="submit"] {
 
 /*装飾*/
 
-*{
+* {
     box-sizing: border-box;
+}
+
+/*ふわっとしたもの*/
+.wrapper {
+    overflow: hidden;
+}
+
+.box {
+    width: 220px;
+    padding: 20px;
+    margin: 0 20px 20px 0;
+    background: #666;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.fadeUPTrigger {
+    opacity: 0;
+}
+
+.fadeUP {
+    animation-name: fadeUPAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUPAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
