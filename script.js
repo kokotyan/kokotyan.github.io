@@ -18,3 +18,10 @@ $(window).scroll(function () {
 $(window).on('load', function () {
     fadeAnime();
 });
+
+const menuIcon = document.querySelector('.menu-icon');
+const menuLines = document.querySelectorAll('.menu-line');
+
+menuIcon.addEventListener('click', () => {
+    menuLines.forEach(line => line.classList.toggle('menu-line-active'));
+});

@@ -271,6 +271,13 @@ button[type="submit"] {
     }
 }
 
+.section2 img {
+    width: 240px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+}
+
 /*装飾*/
 
 * {
@@ -321,8 +328,48 @@ button[type="submit"] {
 }
 
 @keyframes fadeUP {
-    to{
+    to {
         opacity: 1;
         transform: none;
     }
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.menu-line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-line:nth-child(2) {
+    top: 50%;
+    margin-top: -1.5px;
+}
+
+.menu-line:nth-child(3) {
+    top: 100%;
+    margin-top: -3px;
+}
+
+.menu-line-active:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-line-active:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-line-active:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
