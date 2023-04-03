@@ -32,109 +32,130 @@ a {
 }
 
 body {
-    margin:0;
+    margin: 0;
 }
 
 /*ハンバーガーメニューはじめ*/
 
 .content_body {
-	width: 400px;
-	height: 400px;
-	background: lightgrey;
-	position: relative;
+    width: auto;
+    height: 350px;
+    background: lightgrey;
+    position: relative;
 }
+
 .content_body header {
-	position: relative;
-	background-color: black;
-	color: white;
-	z-index: 1;
-	height: 80px;
+    position: relative;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    height: 80px;
 }
+
 .header_container {
-	width: 100%;
-	height: 100%;
-	position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
+
 .header_container h1 {
-	font-size: 1rem;
-	width: fit-content;
-	position: absolute;
-	top: calc( 50% - .8rem);
-	left: 0;
-	right: 0;
-	margin: auto;
+    font-size: 1rem;
+    width: fit-content;
+    position: absolute;
+    top: calc(50% - .8rem);
+    left: 0;
+    right: 0;
+    margin: auto;
 }
+
 .menu_container {
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	top: calc(50% - 25px);
-	left: 20px;
-	cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 20px;
+    cursor: pointer;
 }
+
 .menu_container img {
-	width: 100%;
-	filter: invert(1);
-	position: absolute;
-	top: 0;
-	left: 0;
+    width: 100%;
+    filter: invert(1);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
 .menu_open {
-	opacity: 1;
+    opacity: 1;
 }
-	.menu_open.active {
-		opacity: 0;
-	}
+
+.menu_open.active {
+    opacity: 0;
+}
+
 .menu_close {
-	opacity: 0;
+    opacity: 0;
 }
-	.menu_close.active {
-		opacity: 1;
-	}
+
+.menu_close.active {
+    opacity: 1;
+}
+
 .content_body section {
-	height: 420px;
-	display: grid;
-	justify-content: center;
-	align-content: center;
+    height: 420px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
+
 .sample_sp_menu {
-	background-color: rgba(0,0,0,.5);
-	position: absolute;
-	top: 0;
-	left: -400px; /*ここと*/
-	width: 100%;
-	height: 100%;
-	display: grid;
-	justify-content: center;
-	align-content: center;
-	color: white;
-	text-align: center;
-	transition: .5s;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    text-align: center;
+    transition: .5s;
 }
-	.sample_sp_menu.active {
-		left: 0; /*ここで調整*/
-	}
+
+.sample_sp_menu.active {
+    left: 0;
+}
+
 .sample_sp_menu ul {
-	padding-inline: 0;
+    padding-inline: 0;
 }
+
 .sample_sp_menu li {
-	list-style: none;
-	margin-top: 1.5rem;
-	cursor: pointer;
+    list-style: none;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+*/
+/* .sample_sp_menu .active + .menu {
+    display: block;
 }
 
 /* ハンバーガーメニュー終わり*/
 
 /*chatGPTより参照*/
 
-@media all- and (min-width: 600px) {
+@media all and (min-width: 600px) {
     .menu {
         display: block;
     }
+
     .menu-icon {
         display: none;
     }
 }
+
 /*ここまでchatGPTの内容*/
 
 /*overview*/
