@@ -26,4 +26,12 @@ MenuContainer.addEventListener('click', () => {
     SPMenu.classList.toggle('active');
 });
 
+//考えた末chatGPTを利用
+SPMenu.addEventListener('click', () => {
+    MenuOpen.classList.remove('active');
+    MEnuClose.classList.add('active');
+    SPMenu.classList.remove('active');
+});
+
+
 //ハンバーガーメニュー終わり
