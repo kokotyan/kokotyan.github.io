@@ -1,68 +1,56 @@
-h1 {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h3 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
-}
-
-li {
-    text-align: center;
-}
-
-button {
-    border-color: transparent;
-    background: transparent;
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.5;
     color: #333;
     background-color: #f9f9f9;
 }
 
-/*ハンバーガーメニューはじめ*/
+h1,
+h2,
+h3,
+p,
+li {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-.content_body {
-    width: auto;
-    height: auto;
-    /* background: lightgrey; */
-    /* position: relative; */
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+    border-bottom-color: #0056b3;
 }
 
 .content_body header {
     position: relative;
     background-color: black;
     color: white;
-    z-index: 2;
     height: 80px;
+    z-index: 2;
 }
 
+/* ハンバーガーメニューはじめ */
+
 .header_container {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     position: relative;
 }
 
 .header_container h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: fit-content;
     position: absolute;
     top: calc(50% - .8rem);
@@ -72,21 +60,67 @@ body {
 }
 
 .menu_container {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: calc(50% - 25px);
-    left: 20px;
+    top: calc(50% - 20px);
+    right: 20px;
     cursor: pointer;
 }
 
 .menu_container img {
     width: 100%;
-    filter: invert(1);
+}
+
+.content_body {
+    width: 100%;
+    height: 100%;
+}
+
+.menu_open.active {
+    opacity: 0;
+}
+
+.menu_close.active {
+    opacity: 1;
+}
+
+.sample_sp_menu {
+    background-color: black;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -3000px;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    transition: .5s;
 }
+
+.sample_sp_menu.active {
+    left: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.sample_sp_menu ul {
+    padding-inline: 0;
+}
+
+.sample_sp_menu li {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+button {
+    border-color: transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+
 
 .menu_open {
     opacity: 1;
@@ -104,46 +138,6 @@ body {
     opacity: 1;
 }
 
-.content_body section {
-    height: 420px;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-}
-
-.sample_sp_menu {
-    background-color:black;
-    position: absolute;
-    top: 0;
-    left: -3000px;
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    color: white;
-    text-align: center;
-    transition: .5s;
-}
-
-.sample_sp_menu.active {
-    left: 0;
-}
-
-.sample_sp_menu ul {
-    padding-inline: 0;
-}
-
-.sample_sp_menu li {
-    list-style: none;
-    margin-top: 1.5rem;
-    cursor: pointer;
-}
-
-*/ .sample_sp_menu .active+.menu {
-    display: block;
-}
-
 /*chatGPTより参照*/
 
 @media all and (min-width: 600px) {
@@ -158,69 +152,57 @@ body {
 
 /*概要*/
 
-/* セクションの間隔を追加 */
+/* Section */
 section {
     margin-bottom: 2rem;
 }
 
-/* セクションのタイトルスタイル */
 section h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-/* スキルと勉強に使用した資料のリストスタイル */
+/* List */
 ul {
     list-style: none;
     padding-left: 0;
 }
 
-/* スキルのマークスタイル */
 ul li::before {
-    /* content: "●"; */
     font-size: 1.2rem;
     margin-right: 0.5rem;
 }
 
-/* リンクスタイル */
-a {
-    color: #007bff;
-    text-decoration: none;
-    border-bottom: 1px solid #007bff;
-}
-
-a:hover {
-    color: #0056b3;
-    border-bottom: 1px solid #0056b3;
-}
-
-/* 画像スタイル */
+/* Images */
 .content img {
     width: 100%;
     height: 320px;
     object-fit: cover;
 }
 
-/* ロゴスタイル */
 .logo {
     width: 100%;
     height: 4rem;
 }
 
-/* 概要のスタイル */
+/* Overview */
 #overview {
     background: #f2f2f2;
     padding: 2rem;
 }
 
-/* 概要の枠線スタイル */
+/* Overview */
+#overview {
+    background: #f2f2f2;
+    padding: 2rem;
+}
+
 .section {
     border: 1px solid #ddd;
     padding: 1rem;
     border-radius: 4px;
 }
 
-/* 自撮り画像のスタイル */
 figure {
     margin-bottom: 1rem;
 }
@@ -233,9 +215,6 @@ figure img {
     border-radius: 50%;
     background-position: center center;
     text-align: center;
-    /* width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem; */
 }
 
 figcaption {
@@ -259,11 +238,6 @@ figcaption {
 }
 
 /* flexコンテナのスタイル */
-.section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .hobby-container {
     display: flex;
@@ -304,13 +278,13 @@ figcaption {
 
 /*NEWS欄*/
 
-.News {
+.news {
     list-style: none outside;
     margin: 0;
     padding: 0;
 }
 
-.News .item a {
+.news .item a {
     display: flex;
     flex-wrap: wrap;
     flex-wrap: nowrap;
@@ -320,11 +294,11 @@ figcaption {
     padding: 20px 20px;
 }
 
-.News .item:first-child a {
+.news .item:first-child a {
     border-top: 1px solid #ccc;
 }
 
-.News .item .data {
+.news .item .data {
     margin: 0;
     min-width: 140px;
     font-size: 16px;
@@ -332,13 +306,13 @@ figcaption {
     padding: 0 20px 0 0;
 }
 
-.News .item .category {
+.news .item .category {
     margin: 0;
     min-width: 140px;
     padding: 0 20px 0 0;
 }
 
-.News .item .category span {
+.news .item .category span {
     background: #999;
     color: #fff;
     text-align: center;
@@ -349,25 +323,25 @@ figcaption {
     line-height: 1;
 }
 
-.News .item .title {
+.news .item .title {
     margin: 0;
     width: 100%;
 }
 
-.News .item a:hover .title {
+.news .item a:hover .title {
     color: #00f;
 }
 
 @media screen and (max-width: 767px) {
-    .News .item a {
+    .news .item a {
         flex-wrap: wrap;
     }
 
-    .News .item .data {
+    .news .item .data {
         min-width: 100px;
     }
 
-    .News .item .title {
+    .news .item .title {
         margin-top: 10px;
     }
 }
@@ -386,6 +360,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    text-align: center;
 }
 
 input textarea {
@@ -411,17 +386,13 @@ form {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px; */
+    text-align: center;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
-    /* margin-right: 10px; */
 }
 
 input,
@@ -440,36 +411,88 @@ button[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    /* padding: 5px 10px;
-    background-color: #333;
-    border: none;
-    border-radius: 3px; */
 }
 
 button[type="submit"]:hover {
     background-color: #0062cc;
 }
 
+/* フッターのスタイル */
 footer {
-    margin-top: 50px;
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+/* フッターのロゴスタイル */
+footer .logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* フッターのナビゲーションスタイル */
+footer nav {
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav li {
+    margin: 0 10px;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* フッターのコピーライトスタイル */
+.footer_copy {
+    font-size: 0.8rem;
     text-align: center;
 }
 
-/*js用*/
+/* タブレットサイズまでのスタイル */
+@media (max-width: 767px) {
 
-* {
-    box-sizing: border-box;
-}
+    css Copy code
 
-.fadeUPTrigger {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeUP 2s ease forwards;
-}
+    /* フッターのナビゲーションスタイル */
+    footer nav ul {
+        flex-wrap: wrap;
+    }
 
-@keyframes fadeUP {
-    to {
-        opacity: 1;
-        transform: none;
+    footer nav li {
+        margin: 10px;
     }
 }
+
+/* スマートフォンサイズまでのスタイル */
+@media (max-width: 480px) {
+
+    /*js用*/
+
+    .fadeUPTrigger {
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeUP 2s ease forwards;
+    }
+
+    @keyframes fadeUP {
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
