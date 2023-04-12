@@ -8,7 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    color: #333;
+    /* color: #333; */
+    color:black;
     background-color: #f9f9f9;
 }
 
@@ -38,12 +39,13 @@ a:hover {
     background-color: black;
     color: white;
     height: 80px;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* ハンバーガーメニューはじめ */
 
 .header_container {
+    background-color: #333;
     width: auto;
     height: auto;
     position: relative;
@@ -62,7 +64,7 @@ a:hover {
 .menu_container {
     width: 40px;
     height: 40px;
-    position: absolute;
+    /* position: absolute; */
     top: calc(50% - 20px);
     right: 20px;
     cursor: pointer;
@@ -70,6 +72,7 @@ a:hover {
 
 .menu_container img {
     width: 100%;
+    filter: invert(100%);
 }
 
 .content_body {
@@ -153,9 +156,6 @@ button {
 /*概要*/
 
 /* Section */
-section {
-    margin-bottom: 2rem;
-}
 
 section h3 {
     font-size: 1.5rem;
@@ -183,12 +183,6 @@ ul li::before {
 .logo {
     width: 100%;
     height: 4rem;
-}
-
-/* Overview */
-#overview {
-    background: #f2f2f2;
-    padding: 2rem;
 }
 
 /* Overview */
@@ -354,6 +348,7 @@ form {
     border-radius: 5px;
     max-width: 600px;
     margin: 0 auto;
+    text-align: center;
 }
 
 label {
@@ -361,38 +356,6 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
     text-align: center;
-}
-
-input textarea {
-    text-align: center;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-button[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
 }
 
 input,
@@ -480,19 +443,18 @@ footer nav a:hover {
 }
 
 /* スマートフォンサイズまでのスタイル */
-@media (max-width: 480px) {
+@media (max-width: 480px)
+/*js用*/
 
-    /*js用*/
+/* .fadeUPTrigger {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUP 2s ease forwards;
+} */
 
-    .fadeUPTrigger {
-        opacity: 0;
-        transform: translateY(50px);
-        animation: fadeUP 2s ease forwards;
+/* @keyframes fadeUP {
+    to {
+        opacity: 1;
+        transform: none;
     }
-
-    @keyframes fadeUP {
-        to {
-            opacity: 1;
-            transform: none;
-        }
-    }
+} */

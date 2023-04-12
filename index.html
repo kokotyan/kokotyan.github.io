@@ -14,7 +14,7 @@
     <meta property="og:description" content="訓練生エンジニアここちゃんのポートフォリオサイト。僕がこれまで作った物や、身につけた技術をぎゅっと詰め込んでいます！">
     <meta property="og:site_name" content="ここちゃんのポートフォリオ">
     <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:site" content="@example">
+    <meta name="twitter:site" content="@murakumo_yu">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="shortcut icon" href="img/good.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Capriola">
@@ -23,9 +23,9 @@
 </head>
 
 <body>
-    <header id="header">
+    <header class="header">
         <div class="wrapper">
-            <div class="box fadeUpTrigger">
+            <!-- <div class="box fadeUpTrigger"> -->
                 <div class="content_body">
                     <div class="header_container">
                         <div class="menu_container">
@@ -48,31 +48,30 @@
                     </nav>
                 </div>
     </header>
-    </div>
 </body>
 
-<main class="main">
+<main id="overview">
     <div class="logo"></div>
+    </div>
     <div class="list-menu">
         <div class="content">
             <img src="img/my-room.jpg" alt="部屋の机回り" />
         </div>
-        <section id="overview">
-            <h2>overview</h2>
-            <div class="section">
-                <figure>
-                    <img src="img/zidori.jpg" alt="自撮り" />
-                    <figcaption>
-                        2022年10月に金沢学院大学を中退後、PCで仕事をするということに興味を持ち始める。
-                    </figcaption>
-                </figure>
-                <p>
-                    2022年10月から現在（2023/3/9）まで就労移行支援事業所に通所している。エンジニアやクリエイターの方々の生き方や考えを見て、フロントエンドエンジニアに興味を持った。その後、事業所だけに収まらず独学で勉強を始め、Webデザイナーになることを決意した。
-                </p>
-            </div>
-        </section>
-        <section class="hobby">
-            <h2>Hobby</h2>
+        <h2>overview</h2>
+        <div class="section">
+            <figure>
+                <img src="img/zidori.jpg" alt="自撮り" />
+                <figcaption>
+                    2022年10月に金沢学院大学を中退後、PCで仕事をするということに興味を持ち始める。
+                </figcaption>
+            </figure>
+            <p>
+                2022年10月から現在（2023/3/9）まで就労移行支援事業所に通所している。エンジニアやクリエイターの方々の生き方や考えを見て、フロントエンドエンジニアに興味を持った。その後、事業所だけに収まらず独学で勉強を始め、Webデザイナーになることを決意した。
+            </p>
+        </div>
+
+        <section id="hobby">
+            <h2>hobby</h2>
             <div class="hobby-container">
                 <div class="hobby-item">
                     <img src="img/gadget.jpg" alt="gadget">
@@ -92,7 +91,7 @@
             </div>
         </section>
 
-        <section class="news">
+        <section id="news">
             <ul class="news">
                 <h2>News</h2>
                 <li class="item">
@@ -118,6 +117,7 @@
                 </li>
             </ul>
         </section>
+
         <section id="contact-us">
             <h2>contact-us</h2>
             <div class="section">
@@ -140,6 +140,7 @@
                     <button type="submit">送信する</button>
                 </form>
             </div>
+        </section>
 </main>
 
 <footer id="footer">
@@ -147,7 +148,6 @@
         <p>© 2023 koko's Profile</p>
     </div>
 </footer>
-</div>
 <script> scr = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 </script>
 <script src="script.js"></script>
