@@ -8,11 +8,9 @@ iframe,
 h1,
 h2,
 h3,
-
 p,
 blockquote,
 p
-
 em,
 img,
 ins,
@@ -132,6 +130,14 @@ body {
 
 figure,footer,header,nav {
   display: block;
+}
+
+.skill-item {
+  text-align:left
+}
+
+.skill-item2 {
+  text-align: right;
 }
 
 header {
@@ -320,13 +326,18 @@ figcaption {
 /*hobby*/
 
 /* セクションのスタイル */
+
+section h2 {
+  font-size: 2rem;
+}
+
 #hobby {
   margin: 30px 0;
 }
 
 #hobby h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1em;
   margin-bottom: 20px;
 }
 
@@ -356,7 +367,7 @@ figcaption {
 
 /* 文字列のスタイル */
 .hobby-item p {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5;
   margin-top: 10px;
   margin-bottom: 0;
@@ -525,6 +536,22 @@ footer nav a:hover {
 .footer_copy {
   font-size: 0.8rem;
   text-align: center;
+}
+
+.sns {
+  display: inline-block;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.sns a {
+  color: #555;
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+
+.sns a:hover {
+  color: 00aced;
 }
 
 /* タブレットサイズまでのスタイル */
