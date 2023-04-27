@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ここちゃんのポートフォリオ</title>
     <meta name="description" content="訓練生エンジニアここちゃんのポートフォリオサイト。僕がこれまで作った物や、身につけた技術をぎゅっと詰め込んでいます！">
@@ -25,28 +23,45 @@
 <body>
     <header class="header">
         <div class="wrapper">
-            <!-- <div class="box fadeUpTrigger"> -->
-                <div class="content_body">
-                    <div class="header_container">
-                        <div class="menu_container">
-                            <img class="menu_open" src="img/ham-menu-image01.png">
-                            <img class="menu_close" src="img/ham-menu-image02.png">
+            <div class="content_body">
+                <h1>koko's portfolio</h1>
+                <div class="header_container">
+                    <div class="menu_container">
+                        <div id="drawer_toggle" >
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <h1>koko's Profile</h1>
+
+                        <nav id="gloval_nav" >
+                            <ul>
+                                <li>
+                                    <a href="#overview">overview</a>
+                                </li>
+                                <li>
+                                    <a href="#hobby">hobby</a>
+                                </li>
+                                <li>
+                                    <a href="#news">news</a>
+                                </li>
+                                <li>
+                                    <a href="#contact-us">contact-us</a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/murakumo_yu">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/profile.php?id=100004152586453">facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/k.yuya02/">instagram</a>
+                                </li>
+                                <li>
+                                    <a href="https://ameblo.jp/murakumosanti">ameblo</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <nav class="sample_sp_menu">
-                        <ul>
-                            <li><a href="#overview">overview</a></li>
-                            <li><a href="#hobby">hobby</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#contact-us">contact-us</a></li>
-                            <li><a href="https://twitter.com/murakumo_yu">Twitter</a></li>
-                            <li><a href="https://www.facebook.com/profile.php?id=100004152586453">facebook</a></li>
-                            <li><a href="https://www.instagram.com/k.yuya02/">instagram</a></li>
-                            <li><a href="https://ameblo.jp/murakumosanti">ameba</a></li>
-                        </ul>
-                    </nav>
-                </div>
     </header>
 </body>
 
@@ -66,9 +81,13 @@
                 </figcaption>
             </figure>
             <p>
-                2022年10月から現在（2023/3/9）まで就労移行支援事業所に通所している。エンジニアやクリエイターの方々の生き方や考えを見て、フロントエンドエンジニアに興味を持った。その後、事業所だけに収まらず独学で勉強を始め、Webデザイナーになることを決意した。
+                2022年10月から現在まで就労移行支援事業所に通所している。エンジニアやクリエイターの方々の生き方や考えを見て、webデザインに興味を持った。その後、事業所だけに収まらず独学で勉強を始め、Webデザイナーになることを決意した。
             </p>
         </div>
+
+        <section id="skill">
+            <h2>skill</h2>
+        </section>
 
         <section id="hobby">
             <h2>hobby</h2>
@@ -118,8 +137,8 @@
             </ul>
         </section>
 
-        <section id="contact-us">
-            <h2>contact-us</h2>
+        <sectiÏon id="contact-us">
+            <h2>Contact Us</h2>
             <div class="section">
                 <p>
                     お仕事のご依頼やご相談は、下記のフォームまたはSNSからお気軽にお問い合わせください。
@@ -140,7 +159,7 @@
                     <button type="submit">送信する</button>
                 </form>
             </div>
-        </section>
+        </sectiÏon>
 </main>
 
 <footer id="footer">
@@ -148,8 +167,6 @@
         <p>© 2023 koko's Profile</p>
     </div>
 </footer>
-<script> scr = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
-
 </html>
