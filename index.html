@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="slick-theme.css">
 </head>
 
 <body>
@@ -72,7 +74,8 @@
                 </figcaption>
             </figure>
             <p>
-                2022年10月から現在まで就労移行支援事業所に通所している。エンジニアやクリエイターの方々の生き方や考えを見て、webデザインに興味を持った。その後、事業所だけに収まらず独学で勉強を始め、Webデザイナーになることを決意した。
+                2022年10月から現在まで就労移行支援事業所に通所している。エンジニアやクリエイターの方々の生き方や考えを見て、webデザインに興味を持つ<br>
+                事業所だけに収まらず独学でプログラミングやwordpressの勉強を始め、物を作るのが楽しいと感じてその職のプロになりたいとWebデザイナーになることを志す
             </p>
         </div>
 
@@ -107,22 +110,27 @@
         </section>
         <section id="hobby">
             <h2>hobby</h2>
-            <div class="hobby-container">
-                <div class="hobby-item">
+            <div id="double-slider">
+                <div id="main-slider">
                     <img src="img/gadget.jpg" alt="gadget">
-                    <h3>Gadget⌨</h3>
-                    <p>趣味のひとつはガジェットを収集することです。最近ではオーディオミキサーなども使うようになりました</p>
-                </div>
-                <div class="hobby-item">
                     <img src="img/game.jpg" alt="game">
-                    <h3>Game🎮</h3>
-                    <p>私はよくオンラインゲームをにします、ドラクエXとかrainbow6などなど、でも時たまロマンシングサガとかをしたくなる人でもあります</p>
-                <div class="hobby-item">
                     <img src="img/photo.jpg" alt="photo">
-                    <h3>Photo📸</h3>
-                    <p>ふらっと外に出てみたり旅に行きたくなる人なのでそれの記録に写真を撮ってます。</p>
                 </div>
+                <div id="text-slider">
+                    <p class="txx">
+                        趣味のひとつはガジェットを収集することです。<br>
+                        最近ではオーディオミキサーなども使うようになりました<br>
+                    </p>
+                    <p class="txt">
+                        私はよくオンラインゲームをにします、ドラクエXとかrainbow6などなど<br>
+                        でも時たまロマンシングサガとかをしたくなる人でもあります<br>
+                    </p>
+                    <p class="txt">
+                        ふらっと外に出てみたり旅に行きたくなる人なので<br>
+                        それの記録に写真を撮ってます<br>
+                    </p>
             </div>
+        </div>
         </section>
 
         <section id="news">
@@ -196,5 +204,6 @@
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="slick.min.js"></script>
 <script src="script.js"></script>
 </html>
