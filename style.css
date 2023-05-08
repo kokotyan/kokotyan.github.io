@@ -261,15 +261,20 @@ ul {
 /*overview*/
 
 #overview {
+  max-width: 960px; /* 例えば、960pxに設定 */
+  margin: 0 auto; /* 中央に配置 */
   background: #f2f2f2;
   padding: 2rem;
 }
+
 
 .section {
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 4px;
+  margin: 1rem; /* 余白を追加 */
 }
+
 
 figure {
   margin-bottom: 1rem;
@@ -296,6 +301,29 @@ figcaption {
   color: #888;
   text-align: center;
 }
+
+/* 960px以下の場合 */
+@media (max-width: 960px) {
+  #overview {
+    max-width: 100%; /* 親要素の最大幅を100%に設定 */
+    padding: 1rem; /* パディングを縮小 */
+  }
+  .container {
+    justify-content: center; /* 子要素を中央に配置 */
+  }
+  figure img {
+    width: 120px; /* 画像サイズを縮小 */
+    height: 120px;
+  }
+}
+
+/* 480px以下の場合 */
+@media (max-width: 480px) {
+  .section {
+    margin: 0.5rem; /* 余白を縮小 */
+  }
+}
+
 
 /*skill*/
 
@@ -355,8 +383,8 @@ figcaption {
 
 .news {
   list-style: none outside;
-  margin: 0;
-  padding: 0;
+  margin: 2rem;
+  padding: 2rem;
 }
 
 .news .item a {
