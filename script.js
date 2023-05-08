@@ -13,7 +13,7 @@ $(function () {
 
 $("#main-slider").slick({
   autoplay: true,
-  autoplaySpeed: 6000,
+  autoplaySpeed: 1500,
   infinite: true,
   fade: true,
   asNavFor: "#text-slider",
