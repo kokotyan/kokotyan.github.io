@@ -265,7 +265,7 @@ ul {
 }
 
 #overview h2 {
-  line-height: 6rem;
+  line-height: 11rem;
 }
 
 .section {
@@ -335,22 +335,38 @@ figcaption {
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  gap: 7px;
+  min-height: 200px;
+  padding: 0 7px;
 }
 
 #skill {
   padding: 2rem;
-  margin: 100px 0;
+  margin: 50px 0;
   border: 1px solid #ccc;
 }
 
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+  padding: 0 7px;
+}
+
 .skill-item img {
-  height: 60px;
-  width: 60px;
+  height: 100%;
+  width: 100%;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+@media (max-width: 600px) {
+  .skill-item {
+    width: 50%;
+  }
 }
 
 /*hobby*/
@@ -400,7 +416,7 @@ figcaption {
   padding: 2rem;
 }
 
-.news .item a {
+.news .item .txt {
   display: flex;
   flex-wrap: wrap;
   flex-wrap: nowrap;
@@ -465,7 +481,9 @@ figcaption {
 
 /*お問い合わせフォーム*/
 
-
+.contact-us h2 {
+  line-height: 4rem;
+}
 
 form {
   background-color: #f2f2f2;
@@ -566,7 +584,7 @@ footer nav a:hover {
 }
 
 .sns a:hover {
-  color: 00aced;
+  color: skyblue;
 }
 
 /* タブレットサイズまでのスタイル */
