@@ -53,9 +53,6 @@ video {
   vertical-align: baseline;
   background: transparent;
 }
-body {
-  line-height: 1;
-}
 
 article,
 aside,
@@ -267,6 +264,9 @@ ul {
   padding: 2rem;
 }
 
+#overview h2 {
+  line-height: 6rem;
+}
 
 .section {
   border: 1px solid #ddd;
@@ -300,6 +300,11 @@ figcaption {
   font-size: 0.9rem;
   color: #888;
   text-align: center;
+  line-height: 4rem;
+}
+
+#overview p {
+  line-height: 3rem
 }
 
 /* 960px以下の場合 */
@@ -370,13 +375,21 @@ figcaption {
   object-fit: cover;
 }
 
+#hobby h2 {
+  line-height:7rem;
+}
+
+.txt {
+  line-height: 3rem;
+}
+
 .text-slider {
   width: 80%;
   margin: 30px auto 0;
   padding: 30px 0;
   text-align: center;
   border-radius: 10px;
-
+  line-height: 2rem;
 }
 
 /*NEWS欄*/
@@ -395,6 +408,7 @@ figcaption {
   color: #333;
   border-bottom: 1px solid #ccc;
   padding: 20px 20px;
+  line-height: 3rem;
 }
 
 .news .item:first-child a {
