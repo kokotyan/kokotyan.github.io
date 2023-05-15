@@ -10,7 +10,7 @@ h2,
 h3,
 p,
 blockquote,
-p
+p,
 em,
 img,
 ins,
@@ -92,7 +92,7 @@ a {
   background: transparent;
 }
 
-p {
+p,em {
   text-align: center;
 }
 
@@ -137,14 +137,12 @@ header nav {
   box-sizing: border-box;
   position: fixed;
   top: 60px;
-  /* display: none; */
   width: 100%;
   height: calc(100% - 60px);
   background: #fff;
   opacity: 0.9;
-  /*スライドメニュー用*/
   display: block;
-  right: -100%;
+  right: -100%; /* 変更 */
   transition: right .5s;
 }
 
@@ -154,15 +152,15 @@ header nav.sp_open {
 }
 
 header nav ul {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: static;
+  top: 0;
+  left: 0;
+  transform: none;
 }
 
 header nav ul li a {
   display: block;
-  padding: 25px;
+  padding: 15px 25px;
   border-radius: 5px;
   color: #666;
   font-size: 1.8rem;
@@ -332,7 +330,7 @@ figcaption {
 
 /*skill*/
 
-.container {
+#skill  container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -419,7 +417,6 @@ figcaption {
 .news .item .txt {
   display: flex;
   flex-wrap: wrap;
-  flex-wrap: nowrap;
   text-decoration: none;
   color: #333;
   border-bottom: 1px solid #ccc;
@@ -450,10 +447,9 @@ figcaption {
   color: #fff;
   text-align: center;
   display: inline-block;
-  /*inline-blockとは水平に並べる時にいい*/
   padding: 5px 20px;
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .news .item .title {
@@ -485,6 +481,10 @@ figcaption {
   line-height: 4rem;
 }
 
+#contact-us {
+  pointer-events: none;
+}
+
 form {
   background-color: #f2f2f2;
   padding: 20px;
@@ -506,7 +506,7 @@ textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border: 1ox solid #ccc;
+  border: 1px solid #ccc;
   margin-bottom: 20px;
 }
 
