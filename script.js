@@ -29,7 +29,7 @@ $(function () {
         }
       });
     });
-
+    
     // スムーススクロールの実装
     $("a[href^='#']").click(function(e) {
       e.preventDefault();
