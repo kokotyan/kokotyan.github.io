@@ -63,7 +63,7 @@ $(function() {
 
   $("#main-slider").slick({
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2500,
     infinite: true,
     fade: true,
     asNavFor: "#text-slider",

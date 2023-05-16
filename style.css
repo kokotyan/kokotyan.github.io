@@ -92,11 +92,13 @@ a {
   background: transparent;
 }
 
-p,em {
+p,
+em {
   text-align: center;
 }
 
-input, select {
+input,
+select {
   vertical-align: middle;
 }
 /* End Reset CSS */
@@ -107,26 +109,30 @@ html {
 }
 
 body {
-  font-family:"Helvetica Neue"Arial,"Hiragino kaku Gothic ProN";
+  font-family: "Helvetica Neue" Arial, "Hiragino kaku Gothic ProN";
+  padding-top: 100px;
 }
 
-figure,footer,header,nav {
+figure,
+footer,
+header,
+nav {
   display: block;
 }
 
-header {
-  z-index: 100;
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  background-color: #fff;
+.header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 999;
 }
 
 header h1 {
   position: absolute;
   top: 18px;
   left: 15px;
-  font-size:20px;
+  font-size: 20px;
 }
 
 header .logo img {
@@ -143,7 +149,7 @@ header nav {
   opacity: 0.9;
   display: block;
   right: -100%; /* 変更 */
-  transition: right .5s;
+  transition: right 0.5s;
 }
 
 /*スライドメニュー*/
@@ -252,7 +258,6 @@ ul {
   object-fit: cover;
 }
 
-
 /*overview*/
 
 #overview {
@@ -272,7 +277,6 @@ ul {
   border-radius: 4px;
   margin: 1rem; /* 余白を追加 */
 }
-
 
 figure {
   margin-bottom: 1rem;
@@ -302,7 +306,7 @@ figcaption {
 }
 
 #overview p {
-  line-height: 3rem
+  line-height: 3rem;
 }
 
 /* 960px以下の場合 */
@@ -327,10 +331,13 @@ figcaption {
   }
 }
 
-
 /*skill*/
 
-#skill  container {
+#skill h2 {
+  line-height: 15rem;
+}
+
+#skill .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -369,9 +376,15 @@ figcaption {
 
 /*hobby*/
 
-.slick-arrow{z-index: 2;}
-.slick-prev{left: 0;}
-.slick-next{right: 0;}
+.slick-arrow {
+  z-index: 2;
+}
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  right: 0;
+}
 
 #double-slider {
   width: 60%;
@@ -390,7 +403,7 @@ figcaption {
 }
 
 #hobby h2 {
-  line-height:7rem;
+  line-height: 18rem;
 }
 
 .txt {
@@ -412,6 +425,10 @@ figcaption {
   list-style: none outside;
   margin: 2rem;
   padding: 2rem;
+}
+
+#news h2 {
+  line-height: 15rem;
 }
 
 .news .item .txt {
@@ -587,6 +604,28 @@ footer nav a:hover {
   color: skyblue;
 }
 
+.twitter-feed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px; /* Twitterフィードの幅を調整 */
+  height: 100vh;
+  background-color: #f5f8fa;
+  z-index: 9999;
+  overflow-y: scroll;
+  padding: 20px;
+  margin-top: 120px;
+}
+
+.twitter-timeline {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1366px) {
+  .twitter-feed {
+    display: none;
+  }
+}
+
 /* タブレットサイズまでのスタイル */
 @media (max-width: 767px) {
   css Copy code
@@ -603,107 +642,107 @@ footer nav a:hover {
 
 @media (min-width: 768px) {
   html {
-      font-size: 12px;
+    font-size: 12px;
   }
   header {
-      height: 80px;
+    height: 80px;
   }
   header h1 {
-      top: 24px;
-      left: 25px;
+    top: 24px;
+    left: 25px;
   }
   header .logo img {
-      width: 250px;
+    width: 250px;
   }
   header nav {
-      display: inline-block;
-      position: absolute;
-      top: 22px;
-      right: 0;
-      width: auto;
-      height: auto;
-      margin-right: 15px;
-      font-size: 1.4rem;
-      opacity: 1;
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: auto;
+    height: auto;
+    margin-right: 15px;
+    font-size: 1.4rem;
+    opacity: 1;
   }
   header nav ul {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: unset;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: unset;
   }
   header nav ul li {
-      display: inline-block;
-      height: 35px;
-      border-radius: 2px;
-  line-height: 35px;
+    display: inline-block;
+    height: 35px;
+    border-radius: 2px;
+    line-height: 35px;
   }
   header nav ul li a {
-      display: block;
-  padding: 0 15px;
-      color: #9c9b98;
-      font-size: unset;
-      text-decoration: none;
-      transition: color .3s;
+    display: block;
+    padding: 0 15px;
+    color: #9c9b98;
+    font-size: unset;
+    text-decoration: none;
+    transition: color 0.3s;
   }
   header nav ul li:hover {
-      background-color: #b99566;
+    background-color: #b99566;
   }
   header nav ul li:hover a {
     color: #fff;
   }
   #drawer_toggle {
-      display: none;
+    display: none;
   }
   #key_visual {
-      padding-top: 80px;
-      margin-bottom: 30px;
+    padding-top: 80px;
+    margin-bottom: 30px;
   }
   main {
-      padding-bottom: 50px;
+    padding-bottom: 50px;
   }
   main h2 {
-      padding-left: 20px;
+    padding-left: 20px;
   }
   #information {
-      margin-bottom: 50px;
+    margin-bottom: 50px;
   }
   #information ul {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
   #information ul li time {
-      display: inline-block;
-      padding-right: 10px;
+    display: inline-block;
+    padding-right: 10px;
   }
   #information ul li p {
-      display: inline-block;
-      line-height: 1;
+    display: inline-block;
+    line-height: 1;
   }
   #information ul li p::before {
-      margin-right: 10px;
-      vertical-align: middle;
+    margin-right: 10px;
+    vertical-align: middle;
   }
   #gourmet .container {
-  justify-content: space-between;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
   }
   #gourmet article {
-      width: calc(50% - 5px);
-      padding: 0;
+    width: calc(50% - 5px);
+    padding: 0;
   }
   footer ul li {
-      display: inline-block;
-      width: 120px;
-      margin: 0 10px;
+    display: inline-block;
+    width: 120px;
+    margin: 0 10px;
   }
   footer ul li a {
-      color: #fff;
+    color: #fff;
   }
   footer .logo {
-      margin: 20px 0 5px;
+    margin: 20px 0 5px;
   }
   footer .logo img {
-      width: 200px;
+    width: 200px;
   }
 }
