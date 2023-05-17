@@ -121,11 +121,11 @@ nav {
 }
 
 .header {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 header h1 {
@@ -620,6 +620,29 @@ footer nav a:hover {
 .twitter-timeline {
   margin-bottom: 20px;
 }
+
+#back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
 @media screen and (max-width: 1366px) {
   .twitter-feed {
     display: none;

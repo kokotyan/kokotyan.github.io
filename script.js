@@ -1,36 +1,36 @@
-$(function() {
-  $("#drawer_toggle").click(function() {
+$(function () {
+  $("#drawer_toggle").click(function () {
     $(this).toggleClass("open");
     $("#global_nav").toggleClass("sp_open");
   });
 
-  $("#global_nav a").click(function() {
+  $("#global_nav a").click(function () {
     $("#drawer_toggle").removeClass("open");
     $("#global_nav").removeClass("sp_open");
   });
 
-  $("#drawer_toggle").click(function() {
+  $("#drawer_toggle").click(function () {
     $(this).toggleClass("active");
     $("#global_nav").toggleClass("active");
   });
 
-  $("#global_nav a").click(function() {
+  $("#global_nav a").click(function () {
     $("#drawer_toggle").removeClass("active");
     $("#global_nav").removeClass("active");
   });
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     var sections = $("section");
     var nav = $("#global_nav");
     var headerHeight = $("header").outerHeight();
 
     // スクロールイベントの最適化
     var sectionPositions = [];
-    sections.each(function() {
+    sections.each(function () {
       sectionPositions.push($(this).offset().top - headerHeight);
     });
 
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
       var curPos = $(this).scrollTop();
       var activeSectionIndex = -1;
 
@@ -45,12 +45,14 @@ $(function() {
 
       if (activeSectionIndex !== -1) {
         sections.eq(activeSectionIndex).addClass("active");
-        nav.find('a[href="#' + sections.eq(activeSectionIndex).attr("id") + '"]').addClass("active");
+        nav
+          .find('a[href="#' + sections.eq(activeSectionIndex).attr("id") + '"]')
+          .addClass("active");
       }
     });
 
     // スムーススクロールの実装
-    $("a[href^='#']").click(function(e) {
+    $("a[href^='#']").click(function (e) {
       e.preventDefault();
       var target = $(this).attr("href");
       document.querySelector(target).scrollIntoView({
@@ -76,7 +78,27 @@ $(function() {
     arrows: false,
   });
 
-  $("#main-slider").on("touchmove", function(event, slick, currentSlide, nextSlide) {
-    $("#main-slider").slick("slickPlay");
+  $("#main-slider").on(
+    "touchmove",
+    function (event, slick, currentSlide, nextSlide) {
+      $("#main-slider").slick("slickPlay");
+    }
+  );
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var backToTopButton = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 200) {
+      backToTopButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+    }
+  });
+
+  backToTopButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
