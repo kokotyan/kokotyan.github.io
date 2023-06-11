@@ -299,7 +299,7 @@ figure img {
 }
 
 figcaption {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #888;
   text-align: center;
   line-height: 4rem;
@@ -376,6 +376,12 @@ figcaption {
 
 /*hobby*/
 
+#hobby {
+  padding: 2rem;
+  margin: 50px 0;
+  border: 1px solid #ccc ;
+}
+
 .slick-arrow {
   z-index: 2;
 }
@@ -420,6 +426,12 @@ figcaption {
 }
 
 /*NEWS欄*/
+
+#news {
+  padding: 2rem;
+  margin: 50px 0;
+  border: 1px solid #ccc;
+}
 
 .news {
   list-style: none outside;
