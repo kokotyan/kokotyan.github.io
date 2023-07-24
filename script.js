@@ -65,7 +65,7 @@ $(function () {
 
   $("#main-slider").slick({
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3750,
     infinite: true,
     fade: true,
     asNavFor: "#text-slider",
@@ -102,3 +102,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+gtag("config", "G-6LCEQTSDFY");

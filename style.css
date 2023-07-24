@@ -333,11 +333,11 @@ figcaption {
 
 /*skill*/
 
-#skill h2 {
+/* #skills h2 {
   line-height: 15rem;
 }
 
-#skill .container {
+#skills #container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -346,13 +346,13 @@ figcaption {
   padding: 0 7px;
 }
 
-#skill {
+#skills {
   padding: 2rem;
   margin: 50px 0;
   border: 1px solid #ccc;
 }
 
-.skill-item {
+#skill-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -372,9 +372,68 @@ figcaption {
   .skill-item {
     width: 50%;
   }
+} */
+
+#skills h2 {
+  line-height: 2rem; /* 適切な高さに調整してください */
 }
 
-/*hobby*/
+#skills .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; /* 適切な幅に調整してください */
+  margin: 0 auto; /* 中央寄せする */
+}
+
+#skills {
+  padding: 2rem;
+  margin: 50px auto; /* 上下中央寄せする */
+  border: 1px solid #ccc;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+  padding: 0 7px;
+  margin-bottom: 20px; /* 項目間のスペースを追加 */
+}
+
+.skill-item img {
+  height: 80px; /* 適切な大きさに調整してください */
+  width: 80px; /* 適切な大きさに調整してください */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 600px) {
+  .skill-item {
+    width: 50%;
+  }
+}
+
+
+/*works*/
+
+#works {
+  padding: 3rem;
+  margin: 50px 0;
+  border: 1px solid #ccc;
+}
+
+.work-image {
+  width: 100%;
+  padding: 1rem;
+}
+
+.work-images {
+  width: 20%;
+  object-fit: cover;
+}
 
 #hobby {
   padding: 2rem;
@@ -433,124 +492,43 @@ figcaption {
   border: 1px solid #ccc;
 }
 
-.news {
-  list-style: none outside;
-  margin: 2rem;
-  padding: 2rem;
-}
 
 #news h2 {
   line-height: 15rem;
 }
-
-.news .item .txt {
-  display: flex;
-  flex-wrap: wrap;
-  text-decoration: none;
-  color: #333;
-  border-bottom: 1px solid #ccc;
-  padding: 20px 20px;
-  line-height: 3rem;
+/* ニュース項目のスタイル */
+ul.news {
+  list-style: none;
 }
 
-.news .item:first-child a {
-  border-top: 1px solid #ccc;
-}
-
-.news .item .data {
-  margin: 0;
-  min-width: 140px;
-  font-size: 16px;
-  color: #999;
-  padding: 0 20px 0 0;
-}
-
-.news .item .category {
-  margin: 0;
-  min-width: 140px;
-  padding: 0 20px 0 0;
-}
-
-.news .item .category span {
-  background: #999;
-  color: #fff;
-  text-align: center;
-  display: inline-block;
-  padding: 5px 20px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.news .item .title {
-  margin: 0;
-  width: 100%;
-}
-
-.news .item a:hover .title {
-  color: #00f;
-}
-
-@media screen and (max-width: 767px) {
-  .news .item a {
-    flex-wrap: wrap;
-  }
-
-  .news .item .data {
-    min-width: 100px;
-  }
-
-  .news .item .title {
-    margin-top: 10px;
-  }
-}
-
-/*お問い合わせフォーム*/
-
-.contact-us h2 {
-  line-height: 4rem;
-}
-
-#contact-us {
-  pointer-events: none;
-}
-
-form {
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  text-align: center;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+ul.news li {
   margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
-button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+/* 日付のスタイル */
+ul.news li time {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
 }
 
-button[type="submit"]:hover {
-  background-color: #0062cc;
+/* カテゴリのスタイル */
+ul.news li strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
 }
+
+/* タイトルのスタイル */
+ul.news li p {
+  font-size: 18px;
+  color: #000;
+}
+
 
 /* フッターのスタイル */
 footer {
@@ -615,24 +593,6 @@ footer nav a:hover {
 .sns a:hover {
   color: skyblue;
 }
-
-.twitter-feed {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px; /* Twitterフィードの幅を調整 */
-  height: 100vh;
-  background-color: #f5f8fa;
-  z-index: 9999;
-  overflow-y: scroll;
-  padding: 20px;
-  margin-top: 120px;
-}
-
-.twitter-timeline {
-  margin-bottom: 20px;
-}
-
 #back-to-top {
   position: fixed;
   right: 20px;
@@ -765,6 +725,9 @@ footer nav a:hover {
   #gourmet article {
     width: calc(50% - 5px);
     padding: 0;
+  }
+  #news span {
+    justify-content: center;
   }
   footer ul li {
     display: inline-block;
