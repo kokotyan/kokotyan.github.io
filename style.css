@@ -101,6 +101,7 @@ input,
 select {
   vertical-align: middle;
 }
+
 /* End Reset CSS */
 
 html {
@@ -146,9 +147,9 @@ header nav {
   width: 100%;
   height: calc(100% - 60px);
   background: #fff;
+  background-color: transparent;
   opacity: 0.9;
   display: block;
-  right: -100%; /* 変更 */
   transition: right 0.5s;
 }
 
@@ -166,6 +167,7 @@ header nav ul {
 
 header nav ul li a {
   display: block;
+  text-decoration: none;
   padding: 15px 25px;
   border-radius: 5px;
   color: #666;
@@ -211,12 +213,15 @@ header nav ul li a {
   width: 35px;
   margin: 0;
 }
+
 #drawer_toggle.open span:first-child {
   transform: rotate(45deg);
 }
+
 #drawer_toggle.open span:nth-child(2) {
   display: none;
 }
+
 #drawer_toggle.open span:last-child {
   transform: rotate(-45deg);
 }
@@ -261,8 +266,10 @@ ul {
 /*overview*/
 
 #overview {
-  max-width: 960px; /* 例えば、960pxに設定 */
-  margin: 0 auto; /* 中央に配置 */
+  max-width: 960px;
+  /* 例えば、960pxに設定 */
+  margin: 0 auto;
+  /* 中央に配置 */
   background: #f2f2f2;
   padding: 2rem;
 }
@@ -275,7 +282,8 @@ ul {
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 4px;
-  margin: 1rem; /* 余白を追加 */
+  margin: 1rem;
+  /* 余白を追加 */
 }
 
 figure {
@@ -312,14 +320,20 @@ figcaption {
 /* 960px以下の場合 */
 @media (max-width: 960px) {
   #overview {
-    max-width: 100%; /* 親要素の最大幅を100%に設定 */
-    padding: 1rem; /* パディングを縮小 */
+    max-width: 100%;
+    /* 親要素の最大幅を100%に設定 */
+    padding: 1rem;
+    /* パディングを縮小 */
   }
+
   .container {
-    justify-content: center; /* 子要素を中央に配置 */
+    justify-content: center;
+    /* 子要素を中央に配置 */
   }
+
   figure img {
-    width: 120px; /* 画像サイズを縮小 */
+    width: 120px;
+    /* 画像サイズを縮小 */
     height: 120px;
   }
 }
@@ -327,55 +341,16 @@ figcaption {
 /* 480px以下の場合 */
 @media (max-width: 480px) {
   .section {
-    margin: 0.5rem; /* 余白を縮小 */
+    margin: 0.5rem;
+    /* 余白を縮小 */
   }
 }
 
 /*skill*/
 
-/* #skills h2 {
-  line-height: 15rem;
-}
-
-#skills #container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  padding: 0 7px;
-}
-
-#skills {
-  padding: 2rem;
-  margin: 50px 0;
-  border: 1px solid #ccc;
-}
-
-#skill-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 33.33%;
-  padding: 0 7px;
-}
-
-.skill-item img {
-  height: 100%;
-  width: 100%;
-  max-width: 60px;
-  max-height: 60px;
-}
-
-@media (max-width: 600px) {
-  .skill-item {
-    width: 50%;
-  }
-} */
-
 #skills h2 {
-  line-height: 2rem; /* 適切な高さに調整してください */
+  line-height: 2rem;
+  /* 適切な高さに調整してください */
 }
 
 #skills .container {
@@ -383,13 +358,16 @@ figcaption {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 800px; /* 適切な幅に調整してください */
-  margin: 0 auto; /* 中央寄せする */
+  max-width: 800px;
+  /* 適切な幅に調整してください */
+  margin: 0 auto;
+  /* 中央寄せする */
 }
 
 #skills {
   padding: 2rem;
-  margin: 50px auto; /* 上下中央寄せする */
+  margin: 50px auto;
+  /* 上下中央寄せする */
   border: 1px solid #ccc;
 }
 
@@ -400,12 +378,15 @@ figcaption {
   align-items: center;
   width: 33.33%;
   padding: 0 7px;
-  margin-bottom: 20px; /* 項目間のスペースを追加 */
+  margin-bottom: 20px;
+  /* 項目間のスペースを追加 */
 }
 
 .skill-item img {
-  height: 80px; /* 適切な大きさに調整してください */
-  width: 80px; /* 適切な大きさに調整してください */
+  height: 80px;
+  /* 適切な大きさに調整してください */
+  width: 80px;
+  /* 適切な大きさに調整してください */
   max-width: 100%;
   max-height: 100%;
 }
@@ -444,9 +425,11 @@ figcaption {
 .slick-arrow {
   z-index: 2;
 }
+
 .slick-prev {
   left: 0;
 }
+
 .slick-next {
   right: 0;
 }
@@ -457,13 +440,19 @@ figcaption {
 }
 
 .main-slider {
-  width: 100%;
-  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 60%;
+  margin: 10px 5px;
 }
 
 .main-slider img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  height: 50vh;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -496,6 +485,7 @@ figcaption {
 #news h2 {
   line-height: 15rem;
 }
+
 /* ニュース項目のスタイル */
 ul.news {
   list-style: none;
@@ -593,6 +583,7 @@ footer nav a:hover {
 .sns a:hover {
   color: skyblue;
 }
+
 #back-to-top {
   position: fixed;
   right: 20px;
@@ -625,8 +616,8 @@ footer nav a:hover {
 @media (max-width: 767px) {
   css Copy code
 
-    /* フッターのナビゲーションスタイル */
-    footer nav ul {
+  /* フッターのナビゲーションスタイル */
+  footer nav ul {
     flex-wrap: wrap;
   }
 
@@ -639,16 +630,20 @@ footer nav a:hover {
   html {
     font-size: 12px;
   }
+
   header {
     height: 80px;
   }
+
   header h1 {
     top: 24px;
     left: 25px;
   }
+
   header .logo img {
     width: 250px;
   }
+
   header nav {
     display: inline-block;
     position: absolute;
@@ -660,18 +655,21 @@ footer nav a:hover {
     font-size: 1.4rem;
     opacity: 1;
   }
+
   header nav ul {
     position: relative;
     top: 0;
     left: 0;
     transform: unset;
   }
+
   header nav ul li {
     display: inline-block;
     height: 35px;
     border-radius: 2px;
     line-height: 35px;
   }
+
   header nav ul li a {
     display: block;
     padding: 0 15px;
@@ -680,66 +678,84 @@ footer nav a:hover {
     text-decoration: none;
     transition: color 0.3s;
   }
+
   header nav ul li:hover {
     background-color: #b99566;
   }
+
   header nav ul li:hover a {
     color: #fff;
   }
+
   #drawer_toggle {
     display: none;
   }
+
   #key_visual {
     padding-top: 80px;
     margin-bottom: 30px;
   }
+
   main {
     padding-bottom: 50px;
   }
+
   main h2 {
     padding-left: 20px;
   }
+
   #information {
     margin-bottom: 50px;
   }
+
   #information ul {
     font-size: 1.2rem;
   }
+
   #information ul li time {
     display: inline-block;
     padding-right: 10px;
   }
+
   #information ul li p {
     display: inline-block;
     line-height: 1;
   }
+
   #information ul li p::before {
     margin-right: 10px;
     vertical-align: middle;
   }
+
   #gourmet .container {
     justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
   }
+
   #gourmet article {
     width: calc(50% - 5px);
     padding: 0;
   }
+
   #news span {
     justify-content: center;
   }
+
   footer ul li {
     display: inline-block;
     width: 120px;
     margin: 0 10px;
   }
+
   footer ul li a {
     color: #fff;
   }
+
   footer .logo {
     margin: 20px 0 5px;
   }
+
   footer .logo img {
     width: 200px;
   }
