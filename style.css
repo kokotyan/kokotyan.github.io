@@ -484,6 +484,10 @@ figcaption {
   line-height: 2rem;
 }
 
+.txt h3{
+  text-align: center;
+}
+
 /*NEWS欄*/
 
 #news {
