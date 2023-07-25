@@ -501,39 +501,47 @@ figcaption {
   line-height: 15rem;
 }
 
-/* ニュース項目のスタイル */
-ul.news {
-  list-style: none;
-}
-
-ul.news li {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-}
-
-/* 日付のスタイル */
-ul.news li time {
-  display: block;
-  font-size: 14px;
-  color: #888;
+/* 記事（dt）のスタイル */
+#news dl dt {
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* カテゴリのスタイル */
-ul.news li strong {
-  display: block;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 10px;
+/* 記事内容（dd）のスタイル */
+#news dl dd {
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/* タイトルのスタイル */
-ul.news li p {
-  font-size: 18px;
-  color: #000;
+/* 偶数番目の記事に背景色を設定して交互に色を付ける */
+#news dl:nth-child(even) {
+  background-color: #e9e9e9;
 }
 
+/* リンクのスタイル */
+#news a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+#news a:hover {
+  color: #0056b3;
+}
+
+/* スタイリッシュな線を追加 */
+#news dl {
+  position: relative;
+}
+
+#news dl:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -1px;
+  border-bottom: 1px solid #ddd;
+}
 
 /* フッターのスタイル */
 footer {
