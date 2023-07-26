@@ -97,11 +97,6 @@ em {
   text-align: center;
 }
 
-input,
-select {
-  vertical-align: middle;
-}
-
 /* End Reset CSS */
 
 html {
@@ -512,23 +507,6 @@ figcaption {
   margin-bottom: 15px;
   text-align: center;
 }
-
-/* 偶数番目の記事に背景色を設定して交互に色を付ける */
-#news dl:nth-child(even) {
-  background-color: #e9e9e9;
-}
-
-/* リンクのスタイル */
-#news a {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-#news a:hover {
-  color: #0056b3;
-}
-
 /* スタイリッシュな線を追加 */
 #news dl {
   position: relative;
@@ -548,46 +526,6 @@ footer {
   background: #333;
   color: #fff;
   padding: 2rem 0;
-  text-align: center;
-}
-
-/* フッターのロゴスタイル */
-footer .logo {
-  width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-/* フッターのナビゲーションスタイル */
-footer nav {
-  display: flex;
-  justify-content: center;
-}
-
-footer nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer nav li {
-  margin: 0 10px;
-}
-
-footer nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer nav a:hover {
-  text-decoration: underline;
-}
-
-/* フッターのコピーライトスタイル */
-.footer_copy {
-  font-size: 0.8rem;
   text-align: center;
 }
 
@@ -628,26 +566,7 @@ footer nav a:hover {
 #back-to-top.show {
   opacity: 1;
 }
-
-@media screen and (max-width: 1366px) {
-  .twitter-feed {
-    display: none;
-  }
-}
-
 /* タブレットサイズまでのスタイル */
-@media (max-width: 767px) {
-  css Copy code
-
-  /* フッターのナビゲーションスタイル */
-  footer nav ul {
-    flex-wrap: wrap;
-  }
-
-  footer nav li {
-    margin: 10px;
-  }
-}
 
 @media (min-width: 768px) {
   html {
@@ -667,119 +586,14 @@ footer nav a:hover {
     width: 250px;
   }
 
-  header nav {
-    display: inline-block;
-    position: absolute;
-    top: 22px;
-    right: 0;
-    width: auto;
-    height: auto;
-    margin-right: 15px;
-    font-size: 1.4rem;
-    opacity: 1;
-  }
-
-  header nav ul {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: unset;
-  }
-
-  header nav ul li {
-    display: inline-block;
-    height: 35px;
-    border-radius: 2px;
-    line-height: 35px;
-  }
-
-  header nav ul li a {
-    display: block;
-    padding: 0 15px;
-    color: #9c9b98;
-    font-size: unset;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  header nav ul li:hover {
-    background-color: #b99566;
-  }
-
-  header nav ul li:hover a {
-    color: #fff;
-  }
-
   #drawer_toggle {
     display: none;
   }
-
-  #key_visual {
-    padding-top: 80px;
-    margin-bottom: 30px;
-  }
-
   main {
     padding-bottom: 50px;
   }
 
   main h2 {
     padding-left: 20px;
-  }
-
-  #information {
-    margin-bottom: 50px;
-  }
-
-  #information ul {
-    font-size: 1.2rem;
-  }
-
-  #information ul li time {
-    display: inline-block;
-    padding-right: 10px;
-  }
-
-  #information ul li p {
-    display: inline-block;
-    line-height: 1;
-  }
-
-  #information ul li p::before {
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-
-  #gourmet .container {
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-  }
-
-  #gourmet article {
-    width: calc(50% - 5px);
-    padding: 0;
-  }
-
-  #news span {
-    justify-content: center;
-  }
-
-  footer ul li {
-    display: inline-block;
-    width: 120px;
-    margin: 0 10px;
-  }
-
-  footer ul li a {
-    color: #fff;
-  }
-
-  footer .logo {
-    margin: 20px 0 5px;
-  }
-
-  footer .logo img {
-    width: 200px;
   }
 }
