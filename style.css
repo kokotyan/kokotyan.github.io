@@ -1,104 +1,3 @@
-/*reset css*/
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-p,
-blockquote,
-p,
-em,
-img,
-ins,
-q,
-b,
-i,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-dialog,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-article,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-article,
-aside,
-dialog,
-figure,
-footer,
-header,
-hgroup,
-nav,
-article {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-p,
-em {
-  text-align: center;
-}
-
-/* End Reset CSS */
-
 html {
   color: #54514c;
   font-size: 13px;
@@ -115,6 +14,8 @@ header,
 nav {
   display: block;
 }
+
+/*ヘッダー*/
 
 .header {
   position: fixed;
@@ -135,12 +36,17 @@ header .logo img {
   width: 200px;
 }
 
-header nav {
+/*スライドメニュー、スマホ表示用*/
+header nav.sp_open {
+  right: 0;
+  background: #fff; 
+}
+header nav{
   box-sizing: border-box;
   position: fixed;
   top: 60px;
-  right:-100% ;
-  overflow:auto;
+  right: -100%;
+  overflow: auto;
   width: 100%;
   height: calc(100% - 60px);
   background: #fff;
@@ -148,12 +54,6 @@ header nav {
   opacity: 0.9;
   display: block;
   transition: right 0.5s;
-}
-
-/*スライドメニュー*/
-header nav.sp_open {
-  right: 0;
-  background-color: #fff;
 }
 
 header nav ul {
@@ -223,6 +123,108 @@ header nav ul li a {
 #drawer_toggle.open span:last-child {
   transform: rotate(-45deg);
 }
+/*pc表示のメニュー*/
+header nav  {
+  display: inline-block;
+  position: absolute;
+  top: 22px;
+  right:0;
+  width: auto;
+  height: auto;
+  margin-right: 15px;
+  font-size: 1.4rem;
+  opacity: 1;
+}
+
+header nav  ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: unset;
+}
+
+header nav ul li {
+  display: inline-block;
+  height: 35px;
+  border-radius: 2px;
+  line-height: 35px;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 0 15px;
+  color: #9c9b98;
+  font-size: unset;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav ul li:hover {
+  background-color: #b99566;
+}
+
+header nav ul li:hover a {
+  color: #fff;
+}
+
+/* モバイル表示でPC表示のメニューを非表示 */
+@media (max-width: 768px) {
+  #global_nav {
+    display: none;
+  }
+}
+
+
+/* デフォルトでナビゲーションメニューは非表示にする */
+header .header_container #global_nav {
+  display: none;
+}
+
+/* PC表示のメニュー */
+header .header_container #global_nav {
+display: block;
+}
+
+header .header_container #drawer_toggle {
+display: none;
+position: fixed;
+top: 5px;
+right: 10px;
+z-index: 10000; /* メニューの上に表示 */
+}
+
+/* ハンバーガーメニューが開いたときのスタイル（全てのビューポートで有効） */
+header .header_container #global_nav.sp_open {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff; /* 必要に応じて背景色を変更してください */
+  z-index: 9999; /* メニューが他の要素より上に表示されるようにする */
+}
+
+@media (max-width: 768px) {
+/* モバイル表示でPC表示のメニューを非表示 */
+header .header_container #global_nav {
+  display: none;
+}
+
+/* モバイル表示でハンバーガーメニューを表示 */
+header .header_container #drawer_toggle {
+  display: block;
+}
+
+/* メニュー項目を縦に並べる */
+header .header_container #global_nav.sp_open ul li {
+  display: block;
+  text-align: center; /* センタリング */
+  width: 100%;
+  margin-top: 100px;
+}
+}
+
 
 main {
   font-size: 1.6rem;
@@ -265,7 +267,6 @@ ul {
 
 #overview {
   max-width: 960px;
-  /* 例えば、960pxに設定 */
   margin: 0 auto;
   /* 中央に配置 */
   background: #f2f2f2;
@@ -357,7 +358,6 @@ figcaption {
   justify-content: center;
   align-items: center;
   max-width: 800px;
-  /* 適切な幅に調整してください */
   margin: 0 auto;
   /* 中央寄せする */
 }
@@ -377,7 +377,6 @@ figcaption {
   width: 33.33%;
   padding: 0 7px;
   margin-bottom: 20px;
-  /* 項目間のスペースを追加 */
 }
 
 .skill-item img {
@@ -391,7 +390,7 @@ figcaption {
 
 @media (max-width: 600px) {
   .skill-item {
-    width: 50%;
+    width: 33.33%;
   }
 }
 
@@ -580,10 +579,6 @@ footer {
   header h1 {
     top: 24px;
     left: 25px;
-  }
-
-  header .logo img {
-    width: 250px;
   }
 
   #drawer_toggle {

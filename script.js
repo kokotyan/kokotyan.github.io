@@ -52,7 +52,6 @@ $(function () {
     draggable: false,
     arrows: false,
   });
-  
 
 //googleアナリティクスのコード
 window.dataLayer = window.dataLayer || [];
