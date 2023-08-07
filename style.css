@@ -403,15 +403,67 @@ figcaption {
   border: 1px solid #ccc;
 }
 
-.work-image {
+#works img {
+  object-fit: cover;
   width: 100%;
-  padding: 1rem;
+  height: 40%;
 }
 
-.work-images {
-  width: 20%;
-  object-fit: cover;
+	.slider-container{
+		width: 50%;
+		margin:0 auto ;
+	}
+
+  .slick-slide{
+    padding:8px;
+  }
+	.slick-prev,.slick-next{z-index:2;}
+	.slick-prev{left:0;}
+	.slick-next{right:0;}
+
+  #thumbs .slick-current img{
+  border:2px solid #000;
 }
+
+#works p {
+  margin: 0 auto;
+}
+
+#works text {
+  text-align: center;
+}
+
+/* スマホ用のメディアクエリ */
+@media only screen and (max-width: 767px) {
+  #works {
+    padding: 1rem; /* パディングを小さくする */
+  }
+
+  #works img {
+    height: auto; /* 高さを自動調整する */
+  }
+
+  .slider-container {
+    width: 90%; /* スライダーコンテナを幅の90%にする */
+  }
+
+  .slick-slide {
+    padding: 4px; /* スライダーのスライド間の余白を調整 */
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+    font-size: 1rem; /* 前後の矢印のサイズを調整 */
+  }
+
+  #works p {
+    font-size: 14px; /* 文字サイズを調整 */
+  }
+}
+
+
+/*hobby*/
 
 #hobby {
   padding: 2rem;

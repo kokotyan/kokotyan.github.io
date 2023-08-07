@@ -37,6 +37,30 @@ $(function () {
     });
   });
 
+//worksのslick.js
+
+$("#slider").slick({
+	asNavFor:"#thumbs",
+  autoplay:true,
+  autoplaySpeed: 5000,
+})
+$("#thumbs").slick({
+	asNavFor:"#slider",
+  slidesToShow: 3,
+  autoplay:true,
+  autoplaySpeed:5000,
+})
+$("#txt-slider").slick({
+  asNavFor:"#slider",
+  autoplay:true,
+  autoplaySpeed:2000,
+})
+
+$("#thumbs .slick-slide").on("click",function(){
+  let index=$(this).attr("data-slick-index")
+  $("#slider").slick("slickGoTo",index)
+})
+
   //slick/jsにて画像のスライド
   $("#main-slider").slick({
     autoplay: true,

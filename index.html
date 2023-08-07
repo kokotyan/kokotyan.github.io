@@ -48,9 +48,9 @@
                 <li>
                   <a href="#skills">Skills</a>
                 </li>
-                <!-- <li>
-                    <a href="#works">works</a>
-                  </li> -->
+                <li>
+                  <a href="#works">works</a>
+                </li>
                 <li>
                   <a href="#hobby">hobby</a>
                 </li>
@@ -79,7 +79,7 @@
         </figure>
         <div>
           <p>金沢出身。</p>
-          <p>就労移行で訓練生をしているwebデザイナーの卵</p>
+          <p>訓練中のwebデザイナーの卵</p>
           <p> 空と音楽、それと美味しいものが好き</p>
         </div>
       </div>
@@ -91,7 +91,7 @@
         <!-- HTML -->
         <li class="skill-item">
           <img src="img/html-5.svg" alt="HTML5 Icon" />
-          <p>★★★★</p>
+          <p>★★★★★</p>
         </li>
 
         <!-- CSS -->
@@ -162,18 +162,31 @@
       </div>
     </section>
 
-    <!-- <section id="works">
-        <h2>works</h2>
-        <div class="container">
-          <img class="work-image" src="img/suika.png" alt="圧倒的にスイカ" />
-          <img
-            class="work-image"
-            src="img/worning.png"
-            alt="八月はヤツに気をつけろ"
-          />
-          <img class="work-images" src="img/sora.png" alt="虚実を切り裂いて" />
+    <section id="works">
+      <h2>works</h2>
+      <div class="slider-container">
+        <div id="slider">
+          <div><img src="img/kuragechan.png" alt="クラゲのバナー"></div>
+        <div><img src="img/suika.png" alt="夏っぽいバナー"></div>
         </div>
-      </section> -->
+        <div id="thumbs">
+          <div><img src="img/kuragechan.png" alt="クラゲのバナー"></div>
+          <div><img src="img/suika.png" alt="夏っぽいバナー"></div>
+        </div>
+        <div id="txt-slider">
+          <p class="txt">八月に増えるクラゲ、危ないぞというコンセプトで作りました<br>
+            苦労した点は毒をどんな感じで表そうという単純なものでした
+          </p>
+          <p class="txt">とにかく暑かったので、涼しいものをというコンセプトです<br>
+            苦戦したことは基本鉛筆画を趣味で描くのですが、色を使わないので、コントラストとかどうしようと感じながら作業し<br>
+            時々事業所の方に力を借りたことです</p>
+        </div>
+      </div>
+      <img src="img/akumu.png" alt="イラスト">
+      <p>そんなに上手ではありませんが、イラストも描きます</p>
+      <p>このイラストのコンセプトは絶望した少年を描いてみようということで描きました</p>
+      <p>苦労した点は雨で濡れた肩を描くときの色に困りました</p>
+    </section>
 
     <section id="hobby">
       <h2>hobby</h2>
@@ -191,7 +204,7 @@
           </div>
           <div class="txt">
             <h3>オンラインゲーム</h3>
-            <p>よくするのはドラクエXとBFV。</p>
+            <p>よくするのはドラクエXとBattlefield。</p>
           </div>
           <div class="txt">
             <h3>写真撮影</h3>
@@ -205,6 +218,8 @@
     <section id="news">
       <h2>News</h2>
       <dl>
+        <dt>2023/08/07</dt>
+        <dd>作成物の欄を追加しました</dd>
         <dt>2023/07/21</dt>
         <dd>文の訂正とhobbyのスライドの速度の低下、使われることのないcontact-usを削除しました</dd>
         <dt>2023/06/22</dt>
@@ -235,7 +250,6 @@
     </div>
     <div class="sns">
       <a href="https://twitter.com/murakumo_yu" target="blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com/k.yuya02/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://github.com/kokotyan" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </footer>
