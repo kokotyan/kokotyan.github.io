@@ -354,7 +354,7 @@ figcaption {
   margin: 50px auto;
   max-width: 800px;
   border: 1px solid #ccc;
-  text-align: center; /* テキストを中央寄せに設定 */
+  text-align: center;
 }
 
 /* スキルアイテムのスタイル */
@@ -373,8 +373,15 @@ figcaption {
   height: auto;
   width: 80px;
   max-width: 100%;
-  max-height: 80px; /* 高さを固定する */
-  margin-bottom: 10px; /* 画像の下に余白を追加 */
+  max-height: 80px;
+  margin-bottom: 10px;
+}
+
+/* スキルアイテムのテキストスタイル */
+.skill-item p {
+  font-size: 14px; /* 適切なフォントサイズに調整 */
+  line-height: 1.4; /* 行間を調整 */
+  margin: 0; /* デフォルトのマージンを削除 */
 }
 
 /* メディアクエリ */
