@@ -347,50 +347,41 @@ figcaption {
 
 /*skill*/
 
-#skills h2 {
-  line-height: 2rem;
-  /* 適切な高さに調整してください */
-}
 
-#skills .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  /* 中央寄せする */
-}
-
+/* スキルセクションのスタイル */
 #skills {
   padding: 2rem;
   margin: 50px auto;
-  /* 上下中央寄せする */
+  max-width: 800px;
   border: 1px solid #ccc;
+  text-align: center; /* テキストを中央寄せに設定 */
 }
 
+/* スキルアイテムのスタイル */
 .skill-item {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 33.33%;
-  padding: 0 7px;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
 .skill-item img {
-  height: 80px;
-  /* 適切な大きさに調整してください */
+  height: auto;
   width: 80px;
-  /* 適切な大きさに調整してください */
   max-width: 100%;
-  max-height: 100%;
+  max-height: 80px; /* 高さを固定する */
+  margin-bottom: 10px; /* 画像の下に余白を追加 */
 }
 
-@media (max-width: 600px) {
+/* メディアクエリ */
+@media (min-width: 600px) {
   .skill-item {
-    width: 33.33%;
+    width: calc(33.33% - 20px);
+    margin: 10px;
   }
 }
 
